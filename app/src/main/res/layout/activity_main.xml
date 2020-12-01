@@ -4,44 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="20dp"
+    android:layout_margin="0dp"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/etDescription"
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/flContainer"
+        android:layout_above="@id/bottomNavigation"/>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:hint="description"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="60dp"
-        tools:layout_editor_absoluteY="24dp" />
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/menu_bottom_navigation" />
 
-    <Button
-        android:id="@+id/btnPicture"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/etDescription"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#D5D5D5"
-        android:text="Take a Picture" />
-
-    <Button
-        android:id="@+id/btnSubmit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btnPicture"
-        android:layout_marginTop="260dp"
-        android:backgroundTint="#7CA16F"
-        android:text="Submit" />
-
-    <ImageView
-        android:id="@+id/ivPostImage"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_alignBottom="@+id/btnPicture"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="-234dp"
-        tools:srcCompat="@tools:sample/avatars" />
 </RelativeLayout>
